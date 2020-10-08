@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - L Fripper Tag
+  - R Fripper Tag
   layers:
   - Default
   - TransparentFX
