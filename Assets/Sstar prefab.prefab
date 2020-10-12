@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 2339126691017616015}
   - component: {fileID: 2339126691017616014}
   - component: {fileID: 2339126691017616013}
+  - component: {fileID: -5816782745666152273}
   m_Layer: 0
-  m_Name: Sstar
-  m_TagString: Untagged
+  m_Name: Sstar prefab
+  m_TagString: SS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,3 +95,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &-5816782745666152273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2339126691017616012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ac38f1130e43f045ace0bd5cc739812, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

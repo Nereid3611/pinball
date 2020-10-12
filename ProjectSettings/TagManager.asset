@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - L Fripper Tag
-  - R Fripper Tag
+  - RF
+  - LF
+  - SS
+  - LS
+  - SC
+  - LC
   layers:
   - Default
   - TransparentFX

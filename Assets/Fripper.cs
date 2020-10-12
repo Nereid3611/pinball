@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Configuration;
 using UnityEngine;
-using directive;
 
 
 public class Fripper : MonoBehaviour
@@ -19,7 +18,7 @@ public class Fripper : MonoBehaviour
     void Start()
     {
     　　//Hingeコンポーネントの取得
-        this.myHingeJoint = GetComponent<myHingeJoint>();
+        this.myHingeJoint = GetComponent<HingeJoint>();
 
         SetAngle(this.defaultAngle);
 
@@ -28,19 +27,19 @@ public class Fripper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {    //　　　キー押し込み（→）　
-        if(Input.GetKeyDown(KeyCode.RightArrow) && tag == "RightFripperTag")
+        if(Input.GetKeyDown(KeyCode.RightArrow) && tag == "RF")
         { SetAngle(this.flickAngle); }
-        if(Input.GetKeyDown(KeyCode.LeftArrow) && tag == "LeftFripperTag")
+        if(Input.GetKeyDown(KeyCode.LeftArrow) && tag == "LF")
         { SetAngle(this.flickAngle); }
-        if(Input.GetKeyUp(KeyCode.RightArrow) && tag == "RightFripperTag")
+        if(Input.GetKeyUp(KeyCode.RightArrow) && tag == "RF")
         { SetAngle(this.defaultAngle); }
-        if(Input.GetKeyUp(KeyCode.LeftArrow) && tag == "LeftFripperTag")
+        if(Input.GetKeyUp(KeyCode.LeftArrow) && tag == "LF")
         { SetAngle(this.defaultAngle); }
     }
     public void SetAngle(float angle)
     {
-        JointSpring joinSpr = this.myHingeJoint.spring;
-        JointSpr.targetPosition = angle;
+        JointSpring jointSpr = this.myHingeJoint.spring;
+        jointSpr.targetPosition = angle;
         this.myHingeJoint.spring = jointSpr;
 
     }
