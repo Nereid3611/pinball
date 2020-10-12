@@ -9,7 +9,7 @@ public class PointLight : MonoBehaviour
     //mag=強度
     private float magEm = 2.0f;
 
-    private int Deg = 0;
+    private int Deg = -10;
     private int Sp = 10;
     //ラージクラウドのデフォ色
     Color defaultcolor = Color.white;
@@ -42,7 +42,6 @@ public class PointLight : MonoBehaviour
     {
         if (this.Deg >= 0)
         {
-            Debug.Log(Deg);
             //点滅強度
             Color EmissionColor = this.defaultcolor * (this.minEm + Mathf.Sin(this.Deg * Mathf.Deg2Rad) * magEm);
             myMaterial.SetColor("_EmissionColor", EmissionColor);
@@ -53,7 +52,7 @@ public class PointLight : MonoBehaviour
     
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log("衝突");
+        
 
         //18F分
         this.Deg = 180;
